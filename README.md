@@ -28,3 +28,4 @@ O **NEXUS** é um projeto frontend de e-commerce e suporte tecnológico criado f
 O desenvolvimento do projeto consiste em: 
 * **`v1`**: Estrutura base completa do site desenvolvida em HTML.
 * **`v2`**: Implementação da camada de estilos CSS, identidade visual, efeitos de neon/LED e otimização responsiva.
+* **`v3`**: Correçao do script de scrollspy por um script em java para implementar highlight session na navbar.
