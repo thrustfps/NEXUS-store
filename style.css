@@ -1,0 +1,267 @@
+/* Configuração Geral */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #08070c;
+    color: #cbd5e1;
+    overflow-x: hidden;
+}
+
+/* Espaçamento entre seções */
+.nexus-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+}
+
+/* Navbar Estilo */
+.nexus-navbar {
+    background-color: rgba(8, 7, 12, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1e1b4b;
+}
+
+/* Animação Neon Piscando para a Logo */
+@keyframes neonFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        color: #ffffff;
+        text-shadow: 
+            0 0 4px #9333ea,
+            0 0 10px #9333ea,
+            0 0 20px #9333ea,
+            0 0 40px #c084fc;
+    }
+    20%, 24%, 55% {
+        color: #4b1d7d;
+        text-shadow: none;
+    }
+}
+
+.nexus-logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    animation: neonFlicker 3s infinite alternate;
+}
+
+/* Links do Menu */
+.navbar-nav .nav-link {
+    color: #94a3b8 !important;
+    font-weight: 500;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
+}
+
+/* Carousel / Início */
+.carousel-img {
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+.carousel-caption {
+    background: rgba(10, 9, 16, 0.75);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    max-width: 650px;
+    margin: 0 auto;
+    bottom: 2rem;
+}
+
+/* Botões Personalizados */
+.btn-nexus {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+}
+
+.btn-nexus:hover {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(147, 51, 234, 0.5);
+}
+
+/* Efeito de LED Rotativo na Borda do E-mail */
+@keyframes ledStream {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nexus-email-badge {
+    position: relative;
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    background: #0b0912;
+    border-radius: 10px;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(147, 51, 234, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nexus-email-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: conic-gradient(from 0deg at 50% 50%, transparent 70%, rgba(168, 85, 247, 0.4) 85%, #c084fc 95%, #ffffff 100%);
+    animation: ledStream 3.5s linear infinite;
+    z-index: -2;
+}
+
+.nexus-email-badge::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: linear-gradient(135deg, #181427, #0b0912);
+    border-radius: 9px;
+    z-index: -1;
+}
+
+.nexus-email-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(168, 85, 247, 0.5);
+    color: #ffffff !important;
+}
+
+/* Cards de Produtos */
+.nexus-card {
+    background-color: #12101a !important;
+    border: 1px solid #1e1b4b !important;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nexus-card:hover {
+    transform: translateY(-4px);
+    border-color: #7c3aed !important;
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.2);
+}
+
+.product-img {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Caixa Sobre Nós & Estatísticas */
+.nexus-about-box {
+    background-color: #12101a;
+    border: 1px solid #1e1b4b;
+}
+
+.nexus-stat {
+    background-color: #0b0912;
+    border: 1px solid #1e1b4b;
+}
+
+/* Efeito Neon texto */
+.nexus-neon-text {
+    color: #f3e8ff !important;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.9), 0 0 20px rgba(147, 51, 234, 0.6);
+}
+
+/* Rótulos inferiores */
+.nexus-stat-label {
+    color: #e2e8f0 !important;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Metatags (Hoje, Ativo, 24/7) nítidas e com leve brilho */
+.nexus-meta {
+    color: #e2e8f0 !important;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-shadow: 0 0 6px rgba(168, 85, 247, 0.6);
+}
+
+/* Badges / Emblemas Neon */
+.nexus-badge {
+    background-color: rgba(124, 58, 237, 0.22) !important;
+    color: #f3e8ff !important;
+    border: 1px solid rgba(168, 85, 247, 0.4) !important;
+    text-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Estilo dos Cartões de Notícias & Avisos */
+.nexus-news-item {
+    background-color: #0b0912;
+    border: 1px solid #1e1b4b;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.nexus-news-item:hover {
+    border-color: #7c3aed;
+    transform: translateX(3px);
+}
+
+/* Caixa de Formulário (Contato) */
+.nexus-form-box {
+    background-color: #12101a;
+    border: 1px solid #1e1b4b;
+}
+
+.nexus-input {
+    background-color: #0b0912 !important;
+    border: 1px solid #2e1065 !important;
+    color: #f8fafc !important;
+}
+
+.nexus-input:focus {
+    background-color: #0b0912 !important;
+    border-color: #7c3aed !important;
+    color: #f8fafc !important;
+    box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.25);
+}
+
+/* Rodapé */
+.nexus-footer {
+    background-color: #060509;
+    border-top: 1px solid #1e1b4b;
+}
+
+.footer-link {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #a855f7;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 280px;
+    }
+    .carousel-caption {
+        padding: 1rem !important;
+    }
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Catálogo de Produtos</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top nexus-navbar">
+            <div class="container">
+                <a class="navbar-brand nexus-logo" href="index.html#inicio">NEXUS</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html#inicio">Início</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <!-- Botão do Carrinho Global no Navbar -->
+                <div class="ms-lg-3">
+                    <button class="btn btn-outline-light position-relative rounded-pill px-3 py-2 d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasOrcamento">
+                        🛒 <span class="d-none d-md-inline">Carrinho</span>
+                        <span id="badge-qtd-global" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5 mt-5">
+        <section class="nexus-section pt-4">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold text-white">Catálogo Completo</h1>
+                <p class="text-secondary">Explore o nosso hardware e acessórios de alta performance. Tudo o que precisa num só lugar.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Produto 1: GPU 4090 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="RTX 4090">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">NVIDIA RTX 4090 24GB</h5>
+                            <p class="card-text text-secondary small">A placa de vídeo definitiva para 4K e Ray Tracing extremo.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 12.500,00</span>
+                            <button onclick="adicionarItem('NVIDIA RTX 4090', 12500.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 2: GPU 4070 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="RTX 4070" style="filter: hue-rotate(90deg) brightness(0.8);">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">NVIDIA RTX 4070 12GB</h5>
+                            <p class="card-text text-secondary small">Excelente custo-benefício para rodar tudo no Ultra a 1440p.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 4.500,00</span>
+                            <button onclick="adicionarItem('NVIDIA RTX 4070', 4500.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 3: CPU Intel i9 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Intel i9">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">Intel Core i9 14900K</h5>
+                            <p class="card-text text-secondary small">Processador de altíssimo rendimento com 24 núcleos.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 3.800,00</span>
+                            <button onclick="adicionarItem('Intel Core i9 14900K', 3800.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 4: CPU Ryzen 7 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Ryzen 7" style="filter: sepia(1) hue-rotate(300deg) saturate(3);">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">AMD Ryzen 7 7800X3D</h5>
+                            <p class="card-text text-secondary small">O melhor processador da atualidade para jogos competitivos.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 2.100,00</span>
+                            <button onclick="adicionarItem('AMD Ryzen 7 7800X3D', 2100.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 5: PC Gamer Elite -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="PC Gamer Elite">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">PC Gamer NEXUS Elite</h5>
+                            <p class="card-text text-secondary small">Setup completo montado por especialistas. Pronta entrega.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 8.500,00</span>
+                            <button onclick="adicionarItem('PC Gamer NEXUS Elite', 8500.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 6: PC Gamer Starter -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="PC Gamer Starter">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">PC Gamer NEXUS Starter</h5>
+                            <p class="card-text text-secondary small">Perfeito para iniciar no mundo gamer rodando a 1080p.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 3.200,00</span>
+                            <button onclick="adicionarItem('PC Gamer NEXUS Starter', 3200.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 7: PS5 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="PS5">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">PlayStation 5 (Disc)</h5>
+                            <p class="card-text text-secondary small">Mergulhe em gráficos hiper-realistas com feedback tátil.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 4.100,00</span>
+                            <button onclick="adicionarItem('PlayStation 5', 4100.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 8: Xbox Series X -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Xbox Series X">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">Xbox Series X 1TB</h5>
+                            <p class="card-text text-secondary small">A consola mais rápida e poderosa de sempre.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 4.200,00</span>
+                            <button onclick="adicionarItem('Xbox Series X', 4200.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 9: Kit RGB -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Kit RGB">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">Kit Periféricos RGB</h5>
+                            <p class="card-text text-secondary small">Conjunto premium: Teclado Mecânico, Mouse e Mousepad XXL.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 850,00</span>
+                            <button onclick="adicionarItem('Kit Periféricos RGB', 850.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 10: Monitor -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Monitor">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">Monitor Ultrawide 34"</h5>
+                            <p class="card-text text-secondary small">Painel IPS de 144Hz para o máximo de fluidez e campo de visão.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 2.700,00</span>
+                            <button onclick="adicionarItem('Monitor Ultrawide 34', 2700.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 11: Headset -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Headset">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">Headset Wireless 7.1</h5>
+                            <p class="card-text text-secondary small">Som surround imersivo sem fios para escutar todos os passos.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 650,00</span>
+                            <button onclick="adicionarItem('Headset Wireless 7.1', 650.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 12: Teclado -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Teclado">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">Teclado Mecânico 60%</h5>
+                            <p class="card-text text-secondary small">Switches óticos ultrarrápidos em formato compacto.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 550,00</span>
+                            <button onclick="adicionarItem('Teclado Mecânico 60%', 550.00)" class="btn btn-nexus mt-auto w-100">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Painel Lateral do Carrinho (Compartilhado via localStorage) -->
+    <div class="offcanvas offcanvas-end nexus-about-box text-light" tabindex="-1" id="offcanvasOrcamento" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">Seu Carrinho</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column overflow-auto">
+            <ul id="lista-carrinho" class="list-group list-group-flush mb-3" style="max-height: 25vh; overflow-y: auto;">
+            </ul>
+            
+            
+            <!-- Cálculo de Frete e Desconto Promocional -->
+            <div class="mb-3 p-2 rounded bg-black bg-opacity-25 border border-secondary small">
+                <div class="d-flex justify-content-between text-light mb-1">
+                    <span>Frete:</span>
+                    <span id="valor-frete" class="fw-bold">R$ 0,00</span>
+                </div>
+                <div class="d-flex justify-content-between text-success mb-1">
+                    <span>Desconto Frete (Promoção):</span>
+                    <span id="desconto-frete" class="fw-bold">- R$ 300,00</span>
+                </div>
+                <div class="text-secondary" style="font-size: 0.7rem;">
+                    * R$ 300 de desconto no frete aplicado conforme oferta da página inicial.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fs-5">Total:</span>
+                    <strong id="total-carrinho" class="fs-4 nexus-neon-text" data-total="0">R$ 0,00</strong>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <input type="text" id="input-cupom" class="form-control nexus-input form-control-sm" placeholder="Cupom (ex: NEXUS10)">
+                    <button class="btn btn-outline-light btn-sm" type="button" id="btn-desconto">Aplicar</button>
+                </div>
+            </div>
+
+            <!-- Dados de Envio e E-mail -->
+            <div class="border-top border-secondary pt-3 mb-3">
+                <h6 class="text-white fw-bold mb-2 small">📍 Dados de Entrega e Contato</h6>
+                <div class="mb-2">
+                    <input type="email" id="envio-email" class="form-control nexus-input form-control-sm" autocomplete="email" placeholder="E-mail para confirmação" required>
+                </div>
+                <div class="mb-2">
+                    <input type="text" id="envio-cep" class="form-control nexus-input form-control-sm" autocomplete="postal-code" placeholder="CEP (ex: 44000-000)" required>
+                </div>
+                <div class="mb-2">
+                    <input type="text" id="envio-rua" class="form-control nexus-input form-control-sm" autocomplete="street-address" placeholder="Endereço (Rua, Av...)" required>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-6">
+                        <input type="text" id="envio-numero" class="form-control nexus-input form-control-sm" autocomplete="address-line2" placeholder="Número" required>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="envio-bairro" class="form-control nexus-input form-control-sm" autocomplete="address-level3" placeholder="Bairro" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-auto">
+                <button class="btn btn-nexus w-100 mb-2" onclick="finalizarPedidoComEnvio()">Finalizar Pedido</button>
+                <button class="btn btn-outline-danger w-100 btn-sm" onclick="limparCarrinho()">Esvaziar Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="py-4 nexus-footer mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <p class="mb-2 mb-md-0 small text-secondary">&copy; 2026 NEXUS - Todos os direitos reservados</p>
+            <ul class="list-inline mb-0 small">
+                <li class="list-inline-item"><a href="produtos.html" class="footer-link">Produtos</a></li>
+                <li class="list-inline-item text-secondary">·</li>
+                <li class="list-inline-item"><a href="index.html#sobre" class="footer-link">Sobre</a></li>
+                <li class="list-inline-item text-secondary">·</li>
+                <li class="list-inline-item"><a href="index.html#contato" class="footer-link">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

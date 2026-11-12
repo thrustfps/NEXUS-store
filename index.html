@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Loja de Games e Tecnologia</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top nexus-navbar">
+            <div class="container">
+                <a class="navbar-brand nexus-logo" href="#inicio">NEXUS</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <!-- Botão do Carrinho Global no Navbar -->
+                <div class="ms-lg-3">
+                    <button class="btn btn-outline-light position-relative rounded-pill px-3 py-2 d-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasOrcamento">
+                        🛒 <span class="d-none d-md-inline">Carrinho</span>
+                        <span id="badge-qtd-global" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5 mt-4">
+        
+        <!-- Seção1: Início (Carousel) -->
+        <section id="inicio" class="nexus-section">
+            <div id="nexusCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#nexusCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#nexusCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#nexusCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 carousel-img" alt="Hardware de Computador Avançado">
+                        <div class="carousel-caption p-4 rounded-3 mb-3">
+                            <h1 class="display-6 fw-bold text-white">Tecnologia de Ponta</h1>
+                            <p class="lead text-light mb-3">Hardware de última geração para montar a máquina dos seus sonhos.</p>
+                            <a href="produtos.html" class="btn btn-nexus btn-lg">Ver Ofertas</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 carousel-img" alt="Consoles e Comandos">
+                        <div class="carousel-caption p-4 rounded-3 mb-3">
+                            <h1 class="display-6 fw-bold text-white">Consoles Next-Gen</h1>
+                            <p class="lead text-light mb-3">A melhor experiência imersiva com gráficos de última geração.</p>
+                            <a href="produtos.html" class="btn btn-nexus btn-lg">Explorar Catálogo</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 carousel-img" alt="Assistência Técnica">
+                        <div class="carousel-caption p-4 rounded-3 mb-3">
+                            <h1 class="display-6 fw-bold text-white">Assistência Técnica</h1>
+                            <p class="lead text-light mb-3">Manutenção especializada, limpeza e upgrades para o seu setup.</p>
+                            <a href="#contato" class="btn btn-nexus btn-lg">Agendar Serviço</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#nexusCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#nexusCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Seção2: Destaques (Agora direcionam para a aba Produtos) -->
+        <section id="destaques" class="nexus-section">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Produtos em Destaque</h2>
+                <p class="text-secondary">Clique nos destaques abaixo para explorar e comprar no nosso catálogo completo.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="NVIDIA RTX 4090">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">NVIDIA RTX 4090</h5>
+                            <p class="card-text text-secondary small">Desempenho gráfico extremo.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 12.500,00</span>
+                            <a href="produtos.html" class="btn btn-nexus mt-auto w-100">Ver na aba Produtos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Computadores Pré-montados">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">PC Gamer NEXUS Elite</h5>
+                            <p class="card-text text-secondary small">Pré-build configurado por especialistas.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 8.500,00</span>
+                            <a href="produtos.html" class="btn btn-nexus mt-auto w-100">Ver na aba Produtos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Consoles Next-Gen">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">Console Next-Gen PS5</h5>
+                            <p class="card-text text-secondary small">A nova geração com SSDs ultrarrápidos.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 4.100,00</span>
+                            <a href="produtos.html" class="btn btn-nexus mt-auto w-100">Ver na aba Produtos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card nexus-card h-100">
+                        <img src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=600&q=80" class="card-img-top product-img" alt="Kit Gamer Periféricos">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-white">Kit Periféricos RGB</h5>
+                            <p class="card-text text-secondary small">Teclado, mouse e headset com iluminação.</p>
+                            <span class="nexus-neon-text fs-6 d-block mb-3">R$ 850,00</span>
+                            <a href="produtos.html" class="btn btn-nexus mt-auto w-100">Ver na aba Produtos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção3: Sobre Nós -->
+        <section id="sobre" class="nexus-section">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Sobre a NEXUS</h2>
+                <p class="text-secondary">Especialistas em tecnologia de alta performance</p>
+            </div>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <div class="nexus-about-box p-4 p-md-5 rounded-4 h-100">
+                        <h3 class="fw-bold text-white mb-3">Inovação e Paixão por Games</h3>
+                        <p class="text-secondary mb-4">A NEXUS nasceu para entregar o melhor da tecnologia aos entusiastas e profissionais. Trabalhamos com marcas consagradas, garantia oficial estendida de até 5 anos e suporte especializado para garantir que o seu setup nunca te deixe na mão.</p>
+                        <div class="row text-center g-3">
+                            <div class="col-4">
+                                <div class="p-3 rounded-3 nexus-stat">
+                                    <h4 class="fw-bold nexus-neon-text mb-0">+5</h4>
+                                    <small class="nexus-stat-label">Anos</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-3 rounded-3 nexus-stat">
+                                    <h4 class="fw-bold nexus-neon-text mb-0" style="font-size: 1.1rem;">Até 5 Anos</h4>
+                                    <small class="nexus-stat-label">de Garantia</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-3 rounded-3 nexus-stat">
+                                    <h4 class="fw-bold nexus-neon-text mb-0">24/7</h4>
+                                    <small class="nexus-stat-label">Suporte</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="nexus-about-box p-4 rounded-4 h-100 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="fw-bold text-white mb-0">Notícias & Avisos</h4>
+                            <span class="badge nexus-badge px-2 py-1 small">Live Feed</span>
+                        </div>
+                        <div class="d-flex flex-column gap-3 mt-2">
+                            <div class="nexus-news-item p-3 rounded-3">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <span class="badge nexus-badge small">Lançamento</span>
+                                    <small class="nexus-meta">Hoje</small>
+                                </div>
+                                <p class="text-light small mb-0">Novos processadores e placas de vídeo de última geração já disponíveis.</p>
+                            </div>
+                            <div class="nexus-news-item p-3 rounded-3">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <span class="badge nexus-badge small">Promoção</span>
+                                    <small class="nexus-meta">Ativo</small>
+                                </div>
+                                <p class="text-light small mb-0">Frete grátis em compras acima de R$ 300 para todo o estado.</p>
+                            </div>
+                            <div class="nexus-news-item p-3 rounded-3">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <span class="badge nexus-badge small">Serviço</span>
+                                    <small class="nexus-meta">24/7</small>
+                                </div>
+                                <p class="text-light small mb-0">Assistência técnica especializada com orçamento rápido em bancada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Contato -->
+        <section id="contato" class="nexus-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="nexus-form-box p-4 p-md-5 rounded-4 shadow-lg">
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold text-white">Fale Conosco</h2>
+                            <p class="text-secondary small mb-3">Tem interesse em algum produto ou dúvida sobre montagem? Envie uma mensagem ou utilize nosso e-mail oficial:</p>
+                            <div class="text-center my-3">
+                                <a href="mailto:nexus.storefsa@gmail.com" class="nexus-email-badge text-decoration-none">
+                                    nexus.storefsa@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        <form class="mt-4" id="form-fale-conosco" onsubmit="enviarContato(event)">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label text-light small">Seu Nome</label>
+                                <input type="text" class="form-control nexus-input" id="nome" placeholder="Digite seu nome completo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label text-light small">E-mail</label>
+                                <input type="email" class="form-control nexus-input" id="email" placeholder="seu.email@exemplo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label text-light small">Mensagem / Produto de Interesse</label>
+                                <textarea class="form-control nexus-input" id="mensagem" rows="4" placeholder="Escreva sua dúvida ou pedido..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-nexus w-100 py-2 mt-2">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Painel Lateral do Carrinho (Compartilhado via localStorage) -->
+    <div class="offcanvas offcanvas-end nexus-about-box text-light" tabindex="-1" id="offcanvasOrcamento" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasLabel">Seu Carrinho</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column overflow-auto">
+            <ul id="lista-carrinho" class="list-group list-group-flush mb-3" style="max-height: 25vh; overflow-y: auto;">
+            </ul>
+            
+            
+            <!-- Cálculo de Frete e Desconto Promocional -->
+            <div class="mb-3 p-2 rounded bg-black bg-opacity-25 border border-secondary small">
+                <div class="d-flex justify-content-between text-light mb-1">
+                    <span>Frete:</span>
+                    <span id="valor-frete" class="fw-bold">R$ 0,00</span>
+                </div>
+                <div class="d-flex justify-content-between text-success mb-1">
+                    <span>Desconto Frete (Promoção):</span>
+                    <span id="desconto-frete" class="fw-bold">- R$ 300,00</span>
+                </div>
+                <div class="text-secondary" style="font-size: 0.7rem;">
+                    * R$ 300 de desconto no frete aplicado conforme oferta da página inicial.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fs-5">Total:</span>
+                    <strong id="total-carrinho" class="fs-4 nexus-neon-text" data-total="0">R$ 0,00</strong>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <input type="text" id="input-cupom" class="form-control nexus-input form-control-sm" placeholder="Cupom (ex: NEXUS10)">
+                    <button class="btn btn-outline-light btn-sm" type="button" id="btn-desconto">Aplicar</button>
+                </div>
+            </div>
+
+            <!-- Dados de Envio e E-mail -->
+            <div class="border-top border-secondary pt-3 mb-3">
+                <h6 class="text-white fw-bold mb-2 small">📍 Dados de Entrega e Contato</h6>
+                <div class="mb-2">
+                    <input type="email" id="envio-email" class="form-control nexus-input form-control-sm" autocomplete="email" placeholder="E-mail para confirmação" required>
+                </div>
+                <div class="mb-2">
+                    <input type="text" id="envio-cep" class="form-control nexus-input form-control-sm" autocomplete="postal-code" placeholder="CEP (ex: 44000-000)" required>
+                </div>
+                <div class="mb-2">
+                    <input type="text" id="envio-rua" class="form-control nexus-input form-control-sm" autocomplete="street-address" placeholder="Endereço (Rua, Av...)" required>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-6">
+                        <input type="text" id="envio-numero" class="form-control nexus-input form-control-sm" autocomplete="address-line2" placeholder="Número" required>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="envio-bairro" class="form-control nexus-input form-control-sm" autocomplete="address-level3" placeholder="Bairro" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-auto">
+                <button class="btn btn-nexus w-100 mb-2" onclick="finalizarPedidoComEnvio()">Finalizar Pedido</button>
+                <button class="btn btn-outline-danger w-100 btn-sm" onclick="limparCarrinho()">Esvaziar Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 nexus-footer mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <p class="mb-2 mb-md-0 small text-secondary">&copy; 2026 NEXUS - Todos os direitos reservados</p>
+            <ul class="list-inline mb-0 small">
+                <li class="list-inline-item"><a href="produtos.html" class="footer-link">Produtos</a></li>
+                <li class="list-inline-item text-secondary">·</li>
+                <li class="list-inline-item"><a href="#sobre" class="footer-link">Sobre</a></li>
+                <li class="list-inline-item text-secondary">·</li>
+                <li class="list-inline-item"><a href="#contato" class="footer-link">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
